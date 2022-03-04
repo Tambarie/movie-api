@@ -1,0 +1,11 @@
+localhost:6379
+{"time_stamp":"2022-03-04T20:01:47+01:00","level":"info","message":"started movie service on http://localhost:8090 in 266ns"}
+localhost:6379
+{"time_stamp":"2022-03-04T20:03:39+01:00","level":"info","message":"started movie service on http://localhost:8090 in 457ns"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-04T20:03:46+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"b1f074ed-ece6-4282-9aa8-ab8c1f956abe","user-agent":"PostmanRuntime/7.29.0","x-response-time":"280ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-04T20:06:36+01:00","level":"info","message":"started movie service on http://localhost:8090 in 443ns"}
+setting context
+PONG <nil>
+{"time_stamp":"2022-03-04T20:06:51+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"88b8c691-d0c8-45ba-a59a-45fb0aff07fd","user-agent":"PostmanRuntime/7.29.0","x-response-time":"240ns","x-application-host":"localhost:8090","remote_ip":"::1"}
