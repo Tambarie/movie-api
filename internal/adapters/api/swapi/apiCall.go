@@ -23,7 +23,7 @@ func GetAllMovies() (*[]domain.Movie, error) {
 	defer func(Body io.ReadCloser) {
 		err := Body.Close()
 		if err != nil {
-
+			log.Println(err)
 		}
 	}(resp.Body)
 
@@ -38,6 +38,35 @@ func GetAllMovies() (*[]domain.Movie, error) {
 	}
 	return &movies.Results, nil
 }
+
+func GetAllCharactersByMovieID(movieId int) (*[]string, error) {
+	url := fmt.Sprintf("%s/films/%d/", swapiURl, movieId)
+
+	resp, err := http.Get(url)
+	if err != nil {
+		log.Println(errors.Wrap(err, "failed to get character from swapi api"))
+		return nil, errors.Wrap(err, "failed to get character from swapi api")
+	}
+	defer func(Body io.ReadCloser) {
+		err := Body.Close()
+		if err != nil {
+			log.Println(err)
+		}
+	}(resp.Body)
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return nil, errors.Wrap(err, "failed to read response body from swapi api")
+	}
+
+	var data domain.CharacterLinks
+
+	if err := json.Unmarshal(body, &data); err != nil {
+		log.Println(errors.Wrap(err, "failed to unmarshal response body from swapi api"))
+		return nil, errors.Wrap(err, "failed to unmarshal response body from swapi api")
+	}
+	return &data.Characters, nil
+}
+
 func GetCharacterInfo(link string) (*domain.Character, error) {
 	resp, err := http.Get(link)
 	if err != nil {
@@ -58,26 +87,4 @@ func GetCharacterInfo(link string) (*domain.Character, error) {
 		return nil, errors.Wrap(err, "failed to unmarshal response body from swapi api")
 	}
 	return &data, nil
-}
-
-func GetAllCharactersByMovieId(movieId int) (*[]string, error) {
-	url := fmt.Sprintf("%s/films/%d/", swapiURl, movieId)
-	resp, err := http.Get(url)
-	if err != nil {
-		log.Println(errors.Wrap(err, "failed to get character from swapi api"))
-		return nil, errors.Wrap(err, "failed to get character from swapi api")
-	}
-
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return nil, errors.Wrap(err, "failed to read response body from swapi api")
-	}
-
-	var data domain.CharacterLinks
-
-	if err := json.Unmarshal(body, &data); err != nil {
-		log.Println(errors.Wrap(err, "failed to unmarshal response body from swapi api"))
-		return nil, errors.Wrap(err, "failed to unmarshal response body from swapi api")
-	}
-	return &data.Characters, nil
 }
