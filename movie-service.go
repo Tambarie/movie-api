@@ -18,17 +18,22 @@ func main() {
 	helper.InitializeLogDir()
 	_, postgresdb_pass, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()
 	Addr := fmt.Sprintf("%s:%s", redis_host, redis_port)
-	log.Println(Addr)
+
 	dbRepository := ConnectToPostgres(postgresdb_user, postgresdb_pass, postgresdb_host, postgresdb_name, postgresdb_port, postgresdb_mode, postgresdb_timezone)
+	log.Println(postgresdb_name)
 	redisRepository := ConnectToRedis(Addr)
 	service := services.New(dbRepository)
 	redisService := services.NewRedisService(redisRepository)
 	handler := api.NewHTTPHandler(service, redisService)
 
 	router := gin.Default()
+	//
 	router.Use(helper.LogRequest)
 
 	router.GET("/api/movies", handler.GetMovies())
+	router.GET("/api/movies/:movieID/characters", handler.GetMoviesCharacters())
+	router.POST("/api/movies/:movieID/comments", handler.AddCommentToMovies())
+	router.GET("/api/movies/:movieID/comments", handler.GetCommentsInMovie())
 
 	router.NoRoute(func(ctx *gin.Context) {
 		ctx.JSON(404,
