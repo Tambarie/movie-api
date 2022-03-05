@@ -1,7 +1,6 @@
 package domain
 
 type Character struct {
-	Model
 	Name      string `json:"name"`
 	Height    string `json:"height"`
 	Mass      string `json:"mass"`
