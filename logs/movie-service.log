@@ -1,11 +1,420 @@
+[]
+{"time_stamp":"2022-03-05T02:02:44+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"d429774b-997d-4a0e-a834-ffeb62daa936","user-agent":"PostmanRuntime/7.29.0","x-response-time":"319ns","x-application-host":"localhost:8090","remote_ip":"::1"}
 localhost:6379
-{"time_stamp":"2022-03-04T20:01:47+01:00","level":"info","message":"started movie service on http://localhost:8090 in 266ns"}
+{"time_stamp":"2022-03-05T02:15:50+01:00","level":"info","message":"started movie service on http://localhost:8090 in 491ns"}
 localhost:6379
-{"time_stamp":"2022-03-04T20:03:39+01:00","level":"info","message":"started movie service on http://localhost:8090 in 457ns"}
-Movies retrieved from cache
-{"time_stamp":"2022-03-04T20:03:46+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"b1f074ed-ece6-4282-9aa8-ab8c1f956abe","user-agent":"PostmanRuntime/7.29.0","x-response-time":"280ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T02:17:46+01:00","level":"info","message":"started movie service on http://localhost:8090 in 400ns"}
 localhost:6379
-{"time_stamp":"2022-03-04T20:06:36+01:00","level":"info","message":"started movie service on http://localhost:8090 in 443ns"}
-setting context
+{"time_stamp":"2022-03-05T02:19:56+01:00","level":"info","message":"started movie service on http://localhost:8090 in 486ns"}
+[] am in moviechar
+{"time_stamp":"2022-03-05T02:19:59+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"9ac19735-2978-455f-b8a7-3c73b0ccf94b","user-agent":"PostmanRuntime/7.29.0","x-response-time":"152ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T02:20:57+01:00","level":"info","message":"started movie service on http://localhost:8090 in 204ns"}
+[] am in moviechar
+{"time_stamp":"2022-03-05T02:21:17+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"7bba0cf7-693d-4563-bca1-447437b5a71f","user-agent":"PostmanRuntime/7.29.0","x-response-time":"256ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+[] am in moviechar
+{"time_stamp":"2022-03-05T02:21:32+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"10c801b8-26bf-434f-a1c8-a714ec93b37e","user-agent":"PostmanRuntime/7.29.0","x-response-time":"290ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T02:22:56+01:00","level":"info","message":"started movie service on http://localhost:8090 in 445ns"}
+[] am in moviechar
+am in getallcharacters
+https://swapi.dev/api/films/1/
+{0xc0000bc480}
+&[https://swapi.dev/api/people/1/ https://swapi.dev/api/people/2/ https://swapi.dev/api/people/3/ https://swapi.dev/api/people/4/ https://swapi.dev/api/people/5/ https://swapi.dev/api/people/6/ https://swapi.dev/api/people/7/ https://swapi.dev/api/people/8/ https://swapi.dev/api/people/9/ https://swapi.dev/api/people/10/ https://swapi.dev/api/people/12/ https://swapi.dev/api/people/13/ https://swapi.dev/api/people/14/ https://swapi.dev/api/people/15/ https://swapi.dev/api/people/16/ https://swapi.dev/api/people/18/ https://swapi.dev/api/people/19/ https://swapi.dev/api/people/81/] am in movielink
 PONG <nil>
-{"time_stamp":"2022-03-04T20:06:51+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"88b8c691-d0c8-45ba-a59a-45fb0aff07fd","user-agent":"PostmanRuntime/7.29.0","x-response-time":"240ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T02:23:04+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"317a87d8-58da-4dcd-96d3-488ef121fb2f","user-agent":"PostmanRuntime/7.29.0","x-response-time":"373ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T02:33:52+01:00","level":"info","message":"started movie service on http://localhost:8090 in 315ns"}
+localhost:6379
+{"time_stamp":"2022-03-05T11:25:23+01:00","level":"info","message":"started movie service on http://localhost:8090 in 507ns"}
+[] am in moviechar
+failed to get character from swapi api: Get "https://swapi.dev/api/films/1/": dial tcp: lookup swapi.dev: no such host
+{"time_stamp":"2022-03-05T11:26:11+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:\"The requested resource was NOT found\"","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"1dc4605e-f3b8-4a6c-b1c5-bc9257fd3739","user-agent":"PostmanRuntime/7.29.0","x-response-time":"528ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+[] am in moviechar
+failed to get character from swapi api: Get "https://swapi.dev/api/films/1/": dial tcp: lookup swapi.dev: no such host
+{"time_stamp":"2022-03-05T11:26:15+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:\"The requested resource was NOT found\"","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"62ca4643-6419-4c68-83be-25a7396cc8a4","user-agent":"PostmanRuntime/7.29.0","x-response-time":"241ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T11:26:25+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{\"error\":\"unable to get swapiURL: Get \\\"https://swapi.dev/api/films/\\\": dial tcp: lookup swapi.dev: no such host\"}","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"3b0fef65-1d0a-4795-921a-08e2eb9b5a9d","user-agent":"PostmanRuntime/7.29.0","x-response-time":"183ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+PONG <nil>
+{"time_stamp":"2022-03-05T11:26:52+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"71845faf-2ad7-44c7-ac38-7e88d79cc759","user-agent":"PostmanRuntime/7.29.0","x-response-time":"286ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+[] am in moviechar
+PONG <nil>
+{"time_stamp":"2022-03-05T11:27:01+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"87b1acbb-c039-49ba-86a3-177b31a17c02","user-agent":"PostmanRuntime/7.29.0","x-response-time":"789ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T11:33:08+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"400","message":"Bad Request:\"The requested resource was NOT found\"","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"3a58a802-46bb-48ea-86f1-36b6f9ed795c","user-agent":"PostmanRuntime/7.29.0","x-response-time":"195ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T11:36:15+01:00","level":"info","message":"started movie service on http://localhost:8090 in 338ns"}
+{"time_stamp":"2022-03-05T11:36:16+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"400","message":"Bad Request:\"The requested resource was NOT found\"","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"c61f07c0-abbd-4a88-9299-c15348fb783b","user-agent":"PostmanRuntime/7.29.0","x-response-time":"169ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T11:37:05+01:00","level":"info","message":"started movie service on http://localhost:8090 in 466ns"}
+{"time_stamp":"2022-03-05T11:37:08+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"400","message":"Bad Request:{\"Severity\":\"ERROR\",\"Code\":\"42P01\",\"Message\":\"relation \\\"comments\\\" does not exist\",\"Detail\":\"\",\"Hint\":\"\",\"Position\":13,\"InternalPosition\":0,\"InternalQuery\":\"\",\"Where\":\"\",\"SchemaName\":\"\",\"TableName\":\"\",\"ColumnName\":\"\",\"DataTypeName\":\"\",\"ConstraintName\":\"\",\"File\":\"parse_relation.c\",\"Line\":1376,\"Routine\":\"parserOpenTable\"}","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"a0fdbb20-d900-4d55-8012-db94761968bf","user-agent":"PostmanRuntime/7.29.0","x-response-time":"183ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T11:39:47+01:00","level":"info","message":"started movie service on http://localhost:8090 in 403ns"}
+localhost:6379
+{"time_stamp":"2022-03-05T11:45:19+01:00","level":"info","message":"started movie service on http://localhost:8090 in 135ns"}
+movieID not present
+{"time_stamp":"2022-03-05T11:45:56+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"53bd2a02-1e67-49c6-bdc9-8748c0588461","user-agent":"PostmanRuntime/7.29.0","x-response-time":"325ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+PONG <nil>
+{"time_stamp":"2022-03-05T11:47:00+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"d5e9f60d-21b3-41e6-93b7-8ce1dc9198dd","user-agent":"PostmanRuntime/7.29.0","x-response-time":"168ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+[] am in moviechar
+PONG <nil>
+{"time_stamp":"2022-03-05T11:47:08+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"d3a49504-27f4-4f40-8eee-237fd4417cc7","user-agent":"PostmanRuntime/7.29.0","x-response-time":"240ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T11:47:14+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"4f5a8e62-20c7-4bea-b828-77d39917837d","user-agent":"PostmanRuntime/7.29.0","x-response-time":"426ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T11:47:20+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"c64957c0-9709-4aa2-b0c3-8626daf41e58","user-agent":"PostmanRuntime/7.29.0","x-response-time":"190ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T11:48:04+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"cbbac423-8675-4c57-b9e8-58ffee7fe8cc","user-agent":"PostmanRuntime/7.29.0","x-response-time":"308ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T11:50:29+01:00","level":"info","message":"started movie service on http://localhost:8090 in 159ns"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-05T11:50:36+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"946bcbbf-b18b-4247-ab88-d6b463c7338c","user-agent":"PostmanRuntime/7.29.0","x-response-time":"316ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+[] am in moviechar
+PONG <nil>
+{"time_stamp":"2022-03-05T11:50:44+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"9ca0b29a-c2ec-4092-bb8d-a97563b1653a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"252ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T11:51:31+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"e2f2b63a-4368-4ceb-ab65-a41f6151994b","user-agent":"PostmanRuntime/7.29.0","x-response-time":"355ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T11:52:06+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"4a1efe52-17bc-401a-9aa2-f829f29e6235","user-agent":"PostmanRuntime/7.29.0","x-response-time":"455ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+{"time_stamp":"2022-03-05T11:58:01+01:00","level":"info","message":"started movie service on http://localhost:8090 in 198ns"}
+localhost:6379
+{"time_stamp":"2022-03-05T12:00:10+01:00","level":"info","message":"started movie service on http://localhost:8090 in 138ns"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:00:16+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"d9a51507-bee5-4ecf-9bdc-24576faa2d9a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"222ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:00:19+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"22c1ec4a-5473-4ebd-b64a-80e600e57873","user-agent":"PostmanRuntime/7.29.0","x-response-time":"255ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+{"time_stamp":"2022-03-05T12:02:07+01:00","level":"info","message":"started movie service on http://localhost:8090 in 135ns"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:02:10+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"73a0f1c2-1755-4dd1-b1f6-9bff87677bd2","user-agent":"PostmanRuntime/7.29.0","x-response-time":"120ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc0001462d0 <nil> 0 0xc000135180 1}
+{"time_stamp":"2022-03-05T12:03:03+01:00","level":"info","message":"started movie service on http://localhost:8090 in 128ns"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:03:06+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"4aa99d72-52fe-4ccc-bc9c-7993e846373b","user-agent":"PostmanRuntime/7.29.0","x-response-time":"154ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+movieID not present
+{"time_stamp":"2022-03-05T12:27:19+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"4ad54439-0f02-491c-9626-b2ea419771be","user-agent":"PostmanRuntime/7.29.0","x-response-time":"331ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+PONG <nil>
+{"time_stamp":"2022-03-05T12:27:42+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"813ac8b3-ada3-4645-a1e8-0de8f453d5e1","user-agent":"PostmanRuntime/7.29.0","x-response-time":"222ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+[] am in moviechar
+PONG <nil>
+{"time_stamp":"2022-03-05T12:27:55+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"340c8b91-2d3b-43b6-8aae-e412423e72e5","user-agent":"PostmanRuntime/7.29.0","x-response-time":"437ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:28:01+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"735a406c-4208-4c8a-a0c8-5afae0728457","user-agent":"PostmanRuntime/7.29.0","x-response-time":"192ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T12:28:07+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"d3513030-1d01-4be9-a171-be553afd40a6","user-agent":"PostmanRuntime/7.29.0","x-response-time":"322ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc00013c090 <nil> 0 0xc000034540 1}
+{"time_stamp":"2022-03-05T12:32:06+01:00","level":"info","message":"started movie service on http://localhost:8090 in 187ns"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:32:13+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"8a1c54da-9885-435c-a193-5d836bd1cf16","user-agent":"PostmanRuntime/7.29.0","x-response-time":"101ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc0000b41b0 <nil> 0 0xc000034540 1}
+{"time_stamp":"2022-03-05T12:39:59+01:00","level":"info","message":"started movie service on http://localhost:8090 in 147ns"}
+localhost:6379
+am in postgres db
+&{0xc00013c240 <nil> 0 0xc000034700 1}
+{"time_stamp":"2022-03-05T12:44:09+01:00","level":"info","message":"started movie service on http://localhost:8090 in 89ns"}
+localhost:6379
+am in postgres db
+&{0xc0000c41b0 <nil> 0 0xc000034380 1}
+{"time_stamp":"2022-03-05T12:45:27+01:00","level":"info","message":"started movie service on http://localhost:8090 in 249ns"}
+localhost:6379
+am in postgres db
+&{0xc00013c1b0 <nil> 0 0xc00012ac40 1}
+{"time_stamp":"2022-03-05T12:45:56+01:00","level":"info","message":"started movie service on http://localhost:8090 in 137ns"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:46:04+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"5a58cb7b-1789-4494-9718-1b448e1f328b","user-agent":"PostmanRuntime/7.29.0","x-response-time":"268ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc00013c1b0 <nil> 0 0xc000034700 1}
+{"time_stamp":"2022-03-05T12:48:33+01:00","level":"info","message":"started movie service on http://localhost:8090 in 96ns"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T12:48:43+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"5ffa5189-023d-4354-bbc5-b08a12a89c83","user-agent":"PostmanRuntime/7.29.0","x-response-time":"296ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc0001b4240 <nil> 0 0xc000034540 1}
+{"time_stamp":"2022-03-05T12:50:07+01:00","level":"info","message":"started movie service on http://localhost:8090 in 144ns"}
+PONG <nil>
+{"time_stamp":"2022-03-05T12:50:44+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"ced7b4cd-e876-452f-939d-3dfb82caf167","user-agent":"PostmanRuntime/7.29.0","x-response-time":"477ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc00011e240 <nil> 0 0xc000034c40 1}
+{"time_stamp":"2022-03-05T13:01:24+01:00","level":"info","message":"started movie service on http://localhost:8090 in 90ns"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-05T13:01:33+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"0db54fbc-e346-44ac-ada1-aa6fc397260e","user-agent":"PostmanRuntime/7.29.0","x-response-time":"150ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T13:01:41+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"d60439b1-c407-4286-9c76-8b77c72b304d","user-agent":"PostmanRuntime/7.29.0","x-response-time":"120ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-05T13:04:12+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"ee70b685-626c-474c-80d7-6b84e71dc6e7","user-agent":"PostmanRuntime/7.29.0","x-response-time":"226ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T13:04:51+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"POST","x-correlation-id":"24dec74b-63b0-40d4-8ca8-6f86f87d567b","user-agent":"PostmanRuntime/7.29.0","x-response-time":"122ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-05T13:05:01+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"c99b35e7-f2eb-4e9c-a632-7f2a31599ad7","user-agent":"PostmanRuntime/7.29.0","x-response-time":"273ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T13:05:25+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"7de6fcdf-5c3c-44b2-a0ac-7a4f906881e4","user-agent":"PostmanRuntime/7.29.0","x-response-time":"275ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T13:05:30+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"b81f0de8-67fc-438e-9982-9341729e8b82","user-agent":"PostmanRuntime/7.29.0","x-response-time":"307ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc00012a240 <nil> 0 0xc000034a80 1}
+{"time_stamp":"2022-03-05T13:06:44+01:00","level":"info","message":"started movie service on http://localhost:8090 in 153ns"}
+{"time_stamp":"2022-03-05T13:07:18+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"334c5369-f02a-43c6-b756-103dca02a831","user-agent":"PostmanRuntime/7.29.0","x-response-time":"246ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc00012a090 <nil> 0 0xc000034c40 1}
+{"time_stamp":"2022-03-05T13:08:06+01:00","level":"info","message":"started movie service on http://localhost:8090 in 103ns"}
+{"time_stamp":"2022-03-05T13:08:06+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"a720a950-70d8-4d89-960a-b2217aef2f1f","user-agent":"PostmanRuntime/7.29.0","x-response-time":"292ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc0001b61b0 <nil> 0 0xc000034700 1}
+{"time_stamp":"2022-03-05T13:08:33+01:00","level":"info","message":"started movie service on http://localhost:8090 in 131ns"}
+{"time_stamp":"2022-03-05T13:08:36+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"a0976df0-79cf-4a0d-a98d-dac482471925","user-agent":"PostmanRuntime/7.29.0","x-response-time":"281ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T13:08:37+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"f3ce9c5e-aa23-45ad-ac1f-cbff4d3cd648","user-agent":"PostmanRuntime/7.29.0","x-response-time":"325ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T13:08:38+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:{}","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"fa362473-1079-48ad-aebf-a246bb308f9c","user-agent":"PostmanRuntime/7.29.0","x-response-time":"347ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc0000c6240 <nil> 0 0xc000034380 1}
+{"time_stamp":"2022-03-05T13:09:23+01:00","level":"info","message":"started movie service on http://localhost:8090 in 120ns"}
+{"time_stamp":"2022-03-05T13:09:25+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"6ba8b224-f3bf-44ef-b5ba-0d3f1a69e6dd","user-agent":"PostmanRuntime/7.29.0","x-response-time":"100ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc0000bc240 <nil> 0 0xc0000aaa80 1}
+{"time_stamp":"2022-03-05T13:11:53+01:00","level":"info","message":"started movie service on http://localhost:8090 in 152ns"}
+localhost:6379
+am in postgres db
+&{0xc0000aa240 <nil> 0 0xc000034e00 1}
+{"time_stamp":"2022-03-05T13:18:52+01:00","level":"info","message":"started movie service on http://localhost:8090 in 215ns"}
+{"time_stamp":"2022-03-05T13:18:59+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"ba364f54-5c41-48ea-ad0e-8076f0327440","user-agent":"PostmanRuntime/7.29.0","x-response-time":"134ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+localhost:6379
+am in postgres db
+&{0xc00013c240 <nil> 0 0xc00012a540 1}
+{"time_stamp":"2022-03-05T13:59:22+01:00","level":"info","message":"started movie service on http://localhost:8090 in 87ns"}
+{"time_stamp":"2022-03-05T13:59:30+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"97584874-ccf9-4f1e-a2ec-60d685f7719e","user-agent":"PostmanRuntime/7.29.0","x-response-time":"91ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc000146090 <nil> 0 0xc000034380 1}
+{"time_stamp":"2022-03-05T14:11:30+01:00","level":"info","message":"started movie service on http://localhost:8090 in 148ns"}
+PONG <nil>
+{"time_stamp":"2022-03-05T14:12:02+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"3dc86eab-a4a0-482b-8581-f79c56c24c2a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"268ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+PONG <nil>
+{"time_stamp":"2022-03-05T14:12:31+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"5990aeca-f2f4-43bf-8195-4e58bc8ad065","user-agent":"PostmanRuntime/7.29.0","x-response-time":"218ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc0001a8090 <nil> 0 0xc0001941c0 1}
+{"time_stamp":"2022-03-05T14:19:19+01:00","level":"info","message":"started movie service on http://localhost:8090 in 182ns"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T14:19:38+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"POST","x-correlation-id":"5b9bcd88-9f57-41db-8a52-3e795ee4d0a6","user-agent":"PostmanRuntime/7.29.0","x-response-time":"154ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc0000bc1b0 <nil> 0 0xc000556540 1}
+{"time_stamp":"2022-03-05T15:08:08+01:00","level":"info","message":"started movie service on http://localhost:8090 in 140ns"}
+comment is about to save
+comment is  saved
+movieID not present
+{"time_stamp":"2022-03-05T15:08:14+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"POST","x-correlation-id":"a1decd74-d0e3-4ff5-aef6-b7317334eabe","user-agent":"PostmanRuntime/7.29.0","x-response-time":"210ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+PONG <nil>
+{"time_stamp":"2022-03-05T15:09:23+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"29ae9055-096b-4e33-a164-ed66ebb27f38","user-agent":"PostmanRuntime/7.29.0","x-response-time":"124ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+PONG <nil>
+{"time_stamp":"2022-03-05T15:09:37+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"3fa7898c-485e-4c27-acfd-bcdfa017a5d9","user-agent":"PostmanRuntime/7.29.0","x-response-time":"254ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T15:09:42+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"POST","x-correlation-id":"20626a47-7165-485d-9402-6269d8799c9d","user-agent":"PostmanRuntime/7.29.0","x-response-time":"211ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T15:10:50+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"ea8bfc93-7b51-4ac2-8eca-ae3d60da0f3c","user-agent":"PostmanRuntime/7.29.0","x-response-time":"589ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-05T15:11:51+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"2b66cf6e-6a33-4c3a-b473-474e017653de","user-agent":"PostmanRuntime/7.29.0","x-response-time":"112ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc0000b41b0 <nil> 0 0xc0001e0540 1}
+{"time_stamp":"2022-03-05T15:20:38+01:00","level":"info","message":"started movie service on http://localhost:8090 in 138ns"}
+am in postgres db
+&{0xc00012a1b0 <nil> 0 0xc000034380 1}
+{"time_stamp":"2022-03-05T15:25:11+01:00","level":"info","message":"started movie service on http://localhost:8090 in 146ns"}
+PONG <nil>
+{"time_stamp":"2022-03-05T15:44:18+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"663202d1-b444-462c-b18b-a01ebd30144e","user-agent":"PostmanRuntime/7.29.0","x-response-time":"257ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc0000be240 <nil> 0 0xc0004a4540 1}
+{"time_stamp":"2022-03-05T16:02:01+01:00","level":"info","message":"started movie service on http://localhost:8090 in 198ns"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{e37a4971-f1e5-4c60-bd66-81eeae5bb49b 0001-01-01 00:00:00 +0000 UTC 2022-03-05 16:02:23.641714 +0100 WAT} {} 0 jhsdsd ::1}
+movieID not present
+{"time_stamp":"2022-03-05T16:02:23+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"8f24bfd6-1d75-4444-81fd-6e755aceb249","user-agent":"PostmanRuntime/7.29.0","x-response-time":"325ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc00012a1b0 <nil> 0 0xc000538380 1}
+{"time_stamp":"2022-03-05T16:17:05+01:00","level":"info","message":"started movie service on http://localhost:8090 in 196ns"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{23f7e33f-17d0-4767-9c0a-2313e3b32273 0001-01-01 00:00:00 +0000 UTC 2022-03-05 16:17:12.943354 +0100 WAT} {} 0 jhsdsd ::1}
+movieID not present
+{"time_stamp":"2022-03-05T16:17:12+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"a6020d17-23e5-478e-b76d-2b1207cf3979","user-agent":"PostmanRuntime/7.29.0","x-response-time":"574ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+bushaApp
+am in postgres db
+&{0xc000594090 <nil> 0 0xc0001a41c0 1}
+{"time_stamp":"2022-03-05T16:23:32+01:00","level":"info","message":"started movie service on http://localhost:8090 in 191ns"}
+am in postgres db
+&{0xc00012a1b0 <nil> 0 0xc0000ae380 1}
+bushaApp
+{"time_stamp":"2022-03-05T16:24:49+01:00","level":"info","message":"started movie service on http://localhost:8090 in 173ns"}
+PONG <nil>
+{"time_stamp":"2022-03-05T16:26:52+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"4388de22-4dd9-4a40-8456-f627614b2866","user-agent":"PostmanRuntime/7.29.0","x-response-time":"423ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+PONG <nil>
+{"time_stamp":"2022-03-05T16:26:59+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"201","message":"Created:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/characters","method":"GET","x-correlation-id":"9c79626e-b1a6-4357-aef5-c1f9ebbb47b5","user-agent":"PostmanRuntime/7.29.0","x-response-time":"228ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{4c160e56-2632-484f-9523-886358fe8ad8 0001-01-01 00:00:00 +0000 UTC 2022-03-05 16:27:38.696851 +0100 WAT} {} 0 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T16:27:38+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"16b10610-18e7-4051-ad8e-e5c750d9bcd4","user-agent":"PostmanRuntime/7.29.0","x-response-time":"181ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:27:44+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"b28589e9-e3b8-44ec-af18-3d44d38c0b2a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"204ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc00013e1b0 <nil> 0 0xc000034700 1}
+bushaApp
+{"time_stamp":"2022-03-05T16:36:15+01:00","level":"info","message":"started movie service on http://localhost:8090 in 231ns"}
+{"time_stamp":"2022-03-05T16:36:39+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"d41cb634-7405-4a54-b8a6-8a8f12ee06bf","user-agent":"PostmanRuntime/7.29.0","x-response-time":"285ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{4f39a530-91aa-48a9-b069-9ec3a6a9ce8e 0001-01-01 00:00:00 +0000 UTC 2022-03-05 16:36:50.416349 +0100 WAT} {} 0 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T16:36:50+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"83716328-c498-4cc5-8271-002539ddd053","user-agent":"PostmanRuntime/7.29.0","x-response-time":"335ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+&{0xc00012a090 <nil> 0 0xc000034380 1}
+bushaApp
+{"time_stamp":"2022-03-05T16:40:45+01:00","level":"info","message":"started movie service on http://localhost:8090 in 546ns"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{e3ac5690-a9c5-4706-9699-9eef01853d49 0001-01-01 00:00:00 +0000 UTC 2022-03-05 16:43:10.643013 +0100 WAT} {} 0 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T16:43:10+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"ca464513-f054-4da1-be0d-5a99d32052b7","user-agent":"PostmanRuntime/7.29.0","x-response-time":"225ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T16:48:23+01:00","level":"info","message":"started movie service on http://localhost:8090 in 345ns"}
+am in postgres db
+bushaAppsss
+{"time_stamp":"2022-03-05T16:52:27+01:00","level":"info","message":"started movie service on http://localhost:8090 in 231ns"}
+am in postgres db
+{ <nil> }
+am in postgres db
+{ <nil> }
+am in postgres db
+{ <nil> }
+am in postgres db
+{ <nil> }
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T16:53:53+01:00","level":"info","message":"started movie service on http://localhost:8090 in 256ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T16:55:16+01:00","level":"info","message":"started movie service on http://localhost:8090 in 312ns"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{f910299f-9c56-4e28-b035-dda39cdae352 0001-01-01 00:00:00 +0000 UTC 2022-03-05 16:55:53.5926 +0100 WAT} {} 0 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T16:55:53+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"f5ecfc98-fde5-426d-874e-2b95016bb2c8","user-agent":"PostmanRuntime/7.29.0","x-response-time":"160ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{ccebd70c-9656-4649-9179-2bebeb156db0 0001-01-01 00:00:00 +0000 UTC 2022-03-05 16:56:37.808749 +0100 WAT} {} 0 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T16:56:37+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"cf535a34-3e0c-4ad5-ab46-6b44a327340e","user-agent":"PostmanRuntime/7.29.0","x-response-time":"189ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:10+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"7bccefd3-47f2-4aa9-a47a-ca839d3df56a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"90ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:12+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"d054c7c6-1cf7-4f58-a4d2-dfa37e2d8468","user-agent":"PostmanRuntime/7.29.0","x-response-time":"142ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:13+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"e0998563-92d7-462d-bdcc-99f08269a969","user-agent":"PostmanRuntime/7.29.0","x-response-time":"213ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:14+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"a8f60af0-6e14-400b-b2a4-d7a339988bf8","user-agent":"PostmanRuntime/7.29.0","x-response-time":"121ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:15+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/2/comments","method":"GET","x-correlation-id":"3061503d-5407-4b28-8563-8996232077f2","user-agent":"PostmanRuntime/7.29.0","x-response-time":"54ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:22+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"f8e34718-8220-4273-a028-61a7a02da948","user-agent":"PostmanRuntime/7.29.0","x-response-time":"105ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:23+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"073016e7-6e5e-4e89-8f85-74e41a0c111d","user-agent":"PostmanRuntime/7.29.0","x-response-time":"63ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T16:58:24+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"c433a6a6-9826-46b8-8183-ec2fb6457b5a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"126ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T16:59:23+01:00","level":"info","message":"started movie service on http://localhost:8090 in 146ns"}
+{"time_stamp":"2022-03-05T16:59:28+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"12924f52-e43e-4646-9248-5a7159945a3e","user-agent":"PostmanRuntime/7.29.0","x-response-time":"108ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T17:03:04+01:00","level":"info","message":"started movie service on http://localhost:8090 in 86ns"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{6acedea6-fcc9-42d0-9429-746976d7d14a 0001-01-01 00:00:00 +0000 UTC 2022-03-05 17:04:21.811619 +0100 WAT} {} 0 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T17:04:21+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"c31372bb-fda8-4e68-8d69-8529147d88d9","user-agent":"PostmanRuntime/7.29.0","x-response-time":"210ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-05T17:04:27+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"ce5e2cb7-b4d2-4a04-b991-286dd11f34ea","user-agent":"PostmanRuntime/7.29.0","x-response-time":"120ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T17:04:53+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"8a68d389-595f-4081-9838-fae696fa6bc4","user-agent":"PostmanRuntime/7.29.0","x-response-time":"96ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T17:10:40+01:00","level":"info","message":"started movie service on http://localhost:8090 in 89ns"}
+{"time_stamp":"2022-03-05T17:10:52+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"72649891-5f66-4134-9a5c-05cb79c2f8c8","user-agent":"PostmanRuntime/7.29.0","x-response-time":"79ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{d709e8c2-3eb7-434f-bb0c-24817348a404 0001-01-01 00:00:00 +0000 UTC 2022-03-05 17:17:01.616351 +0100 WAT} {} 0 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T17:17:01+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"c86e1f16-3c72-4bb5-9255-efce95fb001a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"172ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-05T17:17:07+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"3e668cde-a3ea-4b84-9f51-2482d0505a37","user-agent":"PostmanRuntime/7.29.0","x-response-time":"279ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T17:20:41+01:00","level":"info","message":"started movie service on http://localhost:8090 in 259ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-05T17:20:57+01:00","level":"info","message":"started movie service on http://localhost:8090 in 147ns"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{780cf6a9-25d8-40e5-a9fb-ab8c6badd89e 0001-01-01 00:00:00 +0000 UTC 2022-03-05 17:21:03.996574 +0100 WAT} {} 1 jhsdsd ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T17:21:04+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"1e355b19-b446-4954-877f-07ae25f7aad3","user-agent":"PostmanRuntime/7.29.0","x-response-time":"140ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T17:21:13+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"2d7ef15c-309d-4cbc-89c1-1039711849ee","user-agent":"PostmanRuntime/7.29.0","x-response-time":"120ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{9dc06221-28df-424f-80e6-1e45516dad5f 0001-01-01 00:00:00 +0000 UTC 2022-03-05 17:23:47.546506 +0100 WAT} {} 1 jhsdsdhdjjjjjjjjjojsdnjncnjsndnkjsdjcnsdjnsdjncjs c sd c sc sd csd c sdc ds c sdc sd cs c sdc s dcs c sdc skcskc sc sc skc ksc s cks. cs sck skc sk csk csk cks c sc sk csk csk sc s cs ckscks c sc ksc sc sc sc ksc scsck scksc ksc ks ck sck sckcksc ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T17:23:47+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"eb67d201-c74b-4551-add8-8b6ae5b9d70c","user-agent":"PostmanRuntime/7.29.0","x-response-time":"517ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T17:24:30+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"400","message":"Bad Request:{\"message\":\"please, you have exceeded the 500 maximum number of inputs\"}","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"57b75344-8f9c-465c-8fe9-f7a2045aebfe","user-agent":"PostmanRuntime/7.29.0","x-response-time":"620ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{781bebaa-8fb2-4273-b1f4-a19f207eb3e6 0001-01-01 00:00:00 +0000 UTC 2022-03-05 17:24:42.764837 +0100 WAT} {} 1 jnjx ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T17:24:42+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"POST","x-correlation-id":"5841f7ce-51d3-4314-a1d0-7aa4a6928e06","user-agent":"PostmanRuntime/7.29.0","x-response-time":"134ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+comment is about to save
+comment is  saved
+COMMENT HERE &{{1d981ab7-aeb1-4f18-82f4-732b33b14bca 0001-01-01 00:00:00 +0000 UTC 2022-03-05 17:24:49.77412 +0100 WAT} {} 3 jnjx ::1}
+Movies retrieved from cache
+PONG <nil>
+{"time_stamp":"2022-03-05T17:24:49+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/3/comments","method":"POST","x-correlation-id":"dc275148-bbbd-4596-a1a5-a45368911419","user-agent":"PostmanRuntime/7.29.0","x-response-time":"284ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T17:24:54+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/1/comments","method":"GET","x-correlation-id":"ed09f324-7f53-45a8-a43e-c7afeff9a190","user-agent":"PostmanRuntime/7.29.0","x-response-time":"73ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+{"time_stamp":"2022-03-05T17:25:02+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies/3/comments","method":"GET","x-correlation-id":"171c2f73-012e-4a20-b422-6dc078a76903","user-agent":"PostmanRuntime/7.29.0","x-response-time":"75ns","x-application-host":"localhost:8090","remote_ip":"::1"}
