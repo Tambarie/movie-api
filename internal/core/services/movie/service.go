@@ -9,15 +9,15 @@ type Service struct {
 	movieRepository ports.MovieRepository
 }
 
-func (s Service) GetComments(movieId int) (*[]domain.Comment, error) {
-	return s.movieRepository.GetComments(movieId)
+func (s Service) GetComments(movieID int) (*[]domain.Comment, error) {
+	return s.movieRepository.GetComments(movieID)
 }
 
-func (s Service) CountComments(movieId int) (int64, error) {
-	return s.movieRepository.CountComments(movieId)
+func (s Service) CountComments(movieID int) (int64, error) {
+	return s.movieRepository.CountComments(movieID)
 }
 
-func (s Service) SaveComments(comment *domain.Movie) (*domain.Movie, error) {
+func (s Service) SaveComments(comment *domain.Comment) (*domain.Comment, error) {
 	return s.movieRepository.SaveComments(comment)
 }
 
@@ -33,12 +33,12 @@ func (r *RedisService) GetMovie(key string) *[]domain.Movie {
 	return r.redisRepository.GetMovie(key)
 }
 
-func (r *RedisService) SetMovieCharacters(key string, value []domain.Character) {
-	return
+func (r *RedisService) SetMovieCharactersInRedis(key string, value []domain.Character) error {
+	return r.redisRepository.SetMovieCharactersInRedis(key, value)
 }
 
-func (r *RedisService) GetMovieCharacters(key string) []domain.Character {
-	return r.redisRepository.GetMovieCharacters(key)
+func (r *RedisService) GetMovieCharactersInRedis(key string) []domain.Character {
+	return r.redisRepository.GetMovieCharactersInRedis(key)
 }
 
 func New(movieRepository ports.MovieRepository) *Service {
