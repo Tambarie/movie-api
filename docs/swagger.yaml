@@ -1,0 +1,153 @@
+basePath: /
+definitions:
+  domain.Character:
+    properties:
+      birth_year:
+        type: string
+      eye_color:
+        type: string
+      gender:
+        type: string
+      hair_color:
+        type: string
+      height:
+        type: string
+      mass:
+        type: string
+      name:
+        type: string
+      skin_color:
+        type: string
+    type: object
+  domain.Comment:
+    properties:
+      content:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      ip:
+        type: string
+      movie_id:
+        type: integer
+      updated_at:
+        type: string
+    type: object
+  domain.Movie:
+    properties:
+      comment_count:
+        type: integer
+      episode_id:
+        type: integer
+      opening_crawl:
+        type: string
+      release_date:
+        type: string
+      title:
+        type: string
+    type: object
+host: localhost:8090
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: Repo can be found here:https://github.com/Tambarie/movie-api//
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  title: Movie-API Service
+  version: "1"
+paths:
+  /movies:
+    get:
+      description: List an array of movies containing the name, opening crawl and
+        comment count"
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Movie'
+            type: array
+      summary: Route Gets all movies
+  /movies/:movieID/comments/:
+    get:
+      description: Endpoint Gets a list of comments for a particular movieID
+      parameters:
+      - description: Movie ID
+        in: path
+        name: movie_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Comment'
+            type: array
+      summary: Endpoint Gets a list of comments
+    post:
+      consumes:
+      - application/json
+      description: Adds a new comment to a post with  movieID
+      parameters:
+      - description: Comment
+        in: body
+        name: comment
+        required: true
+        schema:
+          items:
+            $ref: '#/definitions/domain.Comment'
+          type: array
+      - description: MovieId
+        in: path
+        name: movie_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses: {}
+      summary: Adds a new comment to a post
+  /movies/{movieID}/characters/:
+    get:
+      description: accept sort parameters to sort by one of name, gender or height
+        in ascending or descending order."
+      parameters:
+      - description: Movie ID
+        in: path
+        name: movie_id
+        required: true
+        type: integer
+      - description: Sort by height or name or gender
+        in: query
+        name: sortBy
+        type: string
+      - description: descending or ascending order
+        in: query
+        name: order
+        type: string
+      - description: can be filtered by male or female options
+        in: query
+        name: filterBy
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/domain.Character'
+            type: array
+      summary: Get characters
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"
