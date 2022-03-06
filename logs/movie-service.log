@@ -921,3 +921,8 @@ Movies retrieved from cache
 am in postgres db
 bushaApp
 {"time_stamp":"2022-03-06T19:30:20+01:00","level":"info","message":"started movie service on http://localhost:8090 in 95ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T19:50:45+01:00","level":"info","message":"started movie service on http://localhost:8090 in 105ns"}
+PONG <nil>
+{"time_stamp":"2022-03-06T19:50:53+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"afba47be-3d51-4b5d-9577-a4604d9c0fc8","user-agent":"PostmanRuntime/7.29.0","x-response-time":"1.1µs","x-application-host":"localhost:8090","remote_ip":"::1"}

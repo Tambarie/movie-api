@@ -34,7 +34,7 @@ func main() {
 	var Addr string
 	_, postgresdb_pass, postgres_database_url, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()
 
-	if os.Getenv("redis_host") == "" || os.Getenv("redis_port") == "" {
+	if os.Getenv("REDIS_URL ") == "" {
 		Addr = fmt.Sprintf("%s:%s", redis_host, redis_port)
 	} else {
 		Addr = fmt.Sprintf("%s:%s", os.Getenv("redis_host"), os.Getenv("redis_port"))
