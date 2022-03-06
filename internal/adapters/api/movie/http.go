@@ -26,6 +26,11 @@ func NewHTTPHandler(movieService ports.MovieService, redisService ports.RedisRep
 	}
 }
 
+// @Summary      Route Gets all movies
+// @Description  List an array of movies containing the name, opening crawl and comment count"
+// @Produce  json
+// @Success 200 {object} []domain.Movie
+// @Router /movies [get]
 func (h *HTTPHandler) GetMovies() gin.HandlerFunc {
 	return func(context *gin.Context) {
 
@@ -44,7 +49,7 @@ func (h *HTTPHandler) GetMovies() gin.HandlerFunc {
 			})
 			movies = &result
 
-			h.AddCommentOnMovies(movies)
+			h.AddComment(movies)
 
 			err = h.redisService.SetMovie("movies", movies)
 			if err != nil {
@@ -55,6 +60,15 @@ func (h *HTTPHandler) GetMovies() gin.HandlerFunc {
 	}
 }
 
+// @Summary Get characters
+// @Description accept sort parameters to sort by one of name, gender or height in ascending or descending order."
+// @Produce  json
+// @Param movie_id path int true "Movie ID"
+// @Param sortBy query string  false "Sort by height or name or gender"
+// @Param order query string false "descending or ascending order"
+// @Param filterBy query string false "can be filtered by male or female options"
+// @Success 200 {object} []domain.Character
+// @Router /movies/{movieID}/characters/ [get]
 func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		sorter := context.Query("sort")
@@ -62,9 +76,10 @@ func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 		filter = strings.TrimSpace(filter)
 		order := context.Query("order")
 		movieIDStr := context.Param("movieID")
+		fmt.Println(movieIDStr)
 		movieID, err := strconv.Atoi(movieIDStr)
 		if err != nil {
-			context.JSON(http.StatusInternalServerError, shared.CONVERSION_ERROR)
+			//context.JSON(http.StatusInternalServerError, err)
 			return
 		}
 
@@ -89,7 +104,7 @@ func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 			_ = h.redisService.SetMovieCharactersInRedis(movieIDStr, movieCharacters)
 		}
 
-		if filter == "female" || filter == "male" {
+		if filter == "n/a" || filter == "hermaphrodite" || filter == "female" || filter == "male" {
 			filteredObject := []domain.Character{}
 
 			for _, movieCharacter := range movieCharacters {
@@ -157,14 +172,18 @@ func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 		result := fmt.Sprintf("%0.2fcm, %0.2fft , %0.2finches", totalHeight, feet, inches)
 
 		context.JSON(201, gin.H{
-			"message":     "retrieved successfully",
-			"characters":  len(movieCharacters),
-			"totalHeight": result,
+			"message":          "retrieved successfully",
+			"characters":       len(movieCharacters),
+			"totalHeight":      result,
+			"listOfCharacters": movieCharacters,
 		})
+
 	}
 }
 
-func (h *HTTPHandler) AddCommentOnMovies(movies *[]domain.Movie) {
+//  @Summary AddCounntToMovies
+// @Description  a method that add comments to movies in the redis cache
+func (h *HTTPHandler) AddComment(movies *[]domain.Movie) {
 	for idx, movie := range *movies {
 		count, _ := h.movieService.CountComments(movie.EpisodeId)
 		fmt.Println(count)
@@ -179,12 +198,19 @@ func (h *HTTPHandler) AddCommentOnMovies(movies *[]domain.Movie) {
 	}
 }
 
+// @Summary Adds a new comment to a post
+// @Description Adds a new comment to a post with  movieID
+// @Accept  json
+// @Produce  json
+// @Param comment body []domain.Comment true "Comment"
+// @Param movie_id path int true "MovieId"
+// @Router /movies/:movieID/comments/ [post]
 func (h *HTTPHandler) AddCommentToMovies() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		movieIDStr := context.Param("movieID")
 		movieID, err := strconv.Atoi(movieIDStr)
 		if err != nil {
-			context.JSON(http.StatusInternalServerError, shared.CONVERSION_ERROR)
+			context.JSON(http.StatusInternalServerError, err)
 			return
 		}
 
@@ -224,6 +250,13 @@ func (h *HTTPHandler) AddCommentToMovies() gin.HandlerFunc {
 	}
 }
 
+// @Summary Endpoint Gets a list of comments
+// @Description Endpoint Gets a list of comments for a particular movieID
+// @Produce  json
+// @Param movie_id path int true "Movie ID"
+// @Success 200 {object} []domain.Comment
+// @Router /movies/:movieID/comments/ [get]
+// GetComments method returns all comments for a particular movieID
 func (h *HTTPHandler) GetCommentsInMovie() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		movieIDStr := context.Param("movieID")
@@ -237,10 +270,6 @@ func (h *HTTPHandler) GetCommentsInMovie() gin.HandlerFunc {
 			context.JSON(http.StatusInternalServerError, err)
 		}
 
-		//for i := 0; i < len(*movieData)/2; i++ {
-		//	(*movieData)[i], (*movieData)[len(*movieData)-1-i] = movieData[len(*movieData)-1-i], (*movieData)[i]
-		//
-
 		context.JSON(200, gin.H{
 			"message": "comments retrieved",
 			"data":    movieData,
@@ -248,6 +277,8 @@ func (h *HTTPHandler) GetCommentsInMovie() gin.HandlerFunc {
 	}
 }
 
+//  @Summary IncrementCommentCountInRedis
+// @Description  a method that increments  comment count to movies in the redisDB
 func (h *HTTPHandler) IncrementCommentCountInRedis(movieID int) bool {
 	var moviesInRedis = h.redisService.GetMovie("movies")
 
