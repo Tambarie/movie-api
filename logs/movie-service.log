@@ -882,3 +882,9 @@ PONG <nil>
 Movies retrieved from cache
 {"time_stamp":"2022-03-06T16:32:45+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"96eee204-4f9b-48f7-a290-4176f2adaa5b","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36","x-response-time":"177ns","x-application-host":"localhost:8090","remote_ip":"::1"}
 {"time_stamp":"2022-03-06T16:32:58+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"400","message":"Bad Request:{\"Func\":\"Atoi\",\"Num\":\":movieID\",\"Err\":{}}","logger_name":"","app_name":"movie-service","path":"/api/movies/:movieID/comments","method":"GET","x-correlation-id":"d5dee8c9-e95e-4c8e-87d7-ca87620797fb","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36","x-response-time":"370ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T17:38:49+01:00","level":"info","message":"started movie service on http://localhost:8090 in 412ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T17:40:01+01:00","level":"info","message":"started movie service on http://localhost:8090 in 282ns"}
