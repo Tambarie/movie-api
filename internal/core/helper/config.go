@@ -42,10 +42,9 @@ var (
 	postgresdb_user       string
 	postgresdb_port       string
 	postgresdb_timezone   string
-
-	redis_host         string
-	redis_port         string
-	externalConfigPath string
+	redis_host            string
+	redis_port            string
+	externalConfigPath    string
 )
 
 func LoadConfig() (string, string, string, string, string, string, string, string, string, string, string, string, string, string, string) {
