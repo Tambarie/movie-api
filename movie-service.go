@@ -34,10 +34,10 @@ import (
 // @securityDefinitions.basic  BasicAuth
 func main() {
 	helper.InitializeLogDir()
-	_, postgresdb_pass, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()
+	_, postgresdb_pass, postgres_database_url, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()
 	Addr := fmt.Sprintf("%s:%s", redis_host, redis_port)
 
-	dbRepository := ConnectToPostgres(postgresdb_user, postgresdb_pass, postgresdb_host, postgresdb_name, postgresdb_port, postgresdb_mode, postgresdb_timezone)
+	dbRepository := ConnectToPostgres(postgresdb_user, postgresdb_pass, postgres_database_url, postgresdb_host, postgresdb_name, postgresdb_port, postgresdb_mode, postgresdb_timezone)
 	log.Println(postgresdb_name)
 	redisRepository := ConnectToRedis(Addr)
 	service := services.New(dbRepository)
@@ -64,8 +64,8 @@ func main() {
 	_ = router.Run(":" + service_port)
 }
 
-func ConnectToPostgres(DBUser, DBPass, DBHost, DBName, DBPort, DBTimezone, DBMode string) ports.MovieRepository {
-	repo := postgresdb.NewPostgresRepository(DBUser, DBPass, DBHost, DBName, DBPort, DBMode, DBTimezone)
+func ConnectToPostgres(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBTimezone, DBMode string) ports.MovieRepository {
+	repo := postgresdb.NewPostgresRepository(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBMode, DBTimezone)
 	return services.New(repo)
 }
 
