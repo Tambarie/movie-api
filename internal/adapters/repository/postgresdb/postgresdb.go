@@ -14,10 +14,15 @@ type PostgresRepository struct {
 	DB *gorm.DB
 }
 
-func NewPostgresClient(DBUser, DBPass, DBHost, DBName, DBPort, DBTimezone, DBMode string) *gorm.DB {
+func NewPostgresClient(DBUser, DBPass, PostgresDBURL, DBHost, DBName, DBPort, DBTimezone, DBMode string) *gorm.DB {
 	var dsn string
+
+	dsn = PostgresDBURL
+	if dsn == "" {
+		dsn = fmt.Sprintf("host=%v user=%v dbname=%v port=%v sslmode=%v TimeZone=%v", DBHost, DBUser, DBName, DBPort, DBMode, DBTimezone)
+	}
 	log.Println("am in postgres db")
-	dsn = fmt.Sprintf("host=%v user=%v dbname=%v port=%v sslmode=%v TimeZone=%v", DBHost, DBUser, DBName, DBPort, DBMode, DBTimezone)
+
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	if err != nil {
@@ -30,8 +35,8 @@ func NewPostgresClient(DBUser, DBPass, DBHost, DBName, DBPort, DBTimezone, DBMod
 	return db
 }
 
-func NewPostgresRepository(DBUser, DBPass, DBHost, DBName, DBPort, DBTimezone, DBMode string) ports.MovieRepository {
-	db := NewPostgresClient(DBUser, DBPass, DBHost, DBName, DBPort, DBTimezone, DBMode)
+func NewPostgresRepository(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBTimezone, DBMode string) ports.MovieRepository {
+	db := NewPostgresClient(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBTimezone, DBMode)
 	return &PostgresRepository{
 		DB: db,
 	}
