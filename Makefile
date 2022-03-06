@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 run:
 	gofmt -w .
-	go run main.go
+	go run movie-service.go
