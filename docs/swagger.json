@@ -14,7 +14,7 @@
         },
         "version": "1"
     },
-    "host": "https://busha-movie-api.herokuapp.com",
+    "host": "busha-movie-api.herokuapp.com",
     "basePath": "/",
     "paths": {
         "/movies": {

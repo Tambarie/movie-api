@@ -47,7 +47,7 @@ definitions:
       title:
         type: string
     type: object
-host: https://busha-movie-api.herokuapp.com
+host: busha-movie-api.herokuapp.com
 info:
   contact:
     email: support@swagger.io

@@ -29,7 +29,7 @@ import (
 // @license.name  MIT
 // @license.url   https://opensource.org/licenses/MIT
 
-// @host      https://busha-movie-api.herokuapp.com
+// @host      busha-movie-api.herokuapp.com
 // @BasePath  /
 // @securityDefinitions.basic  BasicAuth
 func main() {
