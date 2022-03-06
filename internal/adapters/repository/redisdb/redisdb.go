@@ -36,7 +36,6 @@ func (r *RedisCache) getClient() *redis.Client {
 		if err != nil {
 			panic(err)
 		}
-
 	}
 	return redis.NewClient(redisURL)
 }
