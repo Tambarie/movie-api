@@ -20,7 +20,7 @@ import (
 
 // @title         Movie-API Service
 // @version      1
-// @description  Repo can be found here:https://github.com/Tambarie/movie-api//
+// @description  Repo can be found here:https://github.com/Tambarie/movie-api
 
 // @contact.name   API Support
 // @contact.url    http://www.swagger.io/support
@@ -29,7 +29,7 @@ import (
 // @license.name  MIT
 // @license.url   https://opensource.org/licenses/MIT
 
-// @host       localhost:8090
+// @host      https://busha-movie-api.herokuapp.com
 // @BasePath  /
 // @securityDefinitions.basic  BasicAuth
 func main() {
