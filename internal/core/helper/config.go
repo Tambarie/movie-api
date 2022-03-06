@@ -9,7 +9,7 @@ import (
 
 type ConfigStruct struct {
 	AppName             string `mapstructure:"app_name"`
-	PostgresDatabaseURL string `mapstructure:"postgres_database_url"`
+	PostgresDatabaseURL string `mapstructure:"DATABASE_URL"`
 	ServiceAddress      string `mapstructure:"service_address"`
 	ServicePort         string `mapstructure:"service_port"`
 	ServiceMode         string `mapstructure:"service_mode"`
@@ -50,7 +50,7 @@ var (
 
 func LoadConfig() (string, string, string, string, string, string, string, string, string, string, string, string, string, string, string) {
 	flag.StringVar(&dbtype, "dbtype", Config.DBType, "application db type")
-	flag.StringVar(&postgres_database_url, "postgres_database_url", Config.DBType, "application db type")
+	flag.StringVar(&postgres_database_url, "DATABASE_URL", Config.PostgresDatabaseURL, "application db url")
 	flag.StringVar(&postgresdb_pass, "postgresdb_pass", Config.PostgresDBPassword, "application password")
 	flag.StringVar(&service_address, "service_address", Config.ServiceAddress, "local host")
 	flag.StringVar(&service_port, "service_port", Config.ServicePort, "application ports")
