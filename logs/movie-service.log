@@ -891,3 +891,33 @@ bushaApp
 am in postgres db
 bushaApp
 {"time_stamp":"2022-03-06T17:46:23+01:00","level":"info","message":"started movie service on http://localhost:8090 in 385ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T18:51:38+01:00","level":"info","message":"started movie service on http://localhost:8090 in 113ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T18:52:55+01:00","level":"info","message":"started movie service on http://localhost:8090 in 91ns"}
+{"time_stamp":"2022-03-06T18:53:21+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:\"could not set value to redis\"","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"6534d57b-bf89-4926-a848-4a7c782fd867","user-agent":"PostmanRuntime/7.29.0","x-response-time":"348ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T18:56:06+01:00","level":"info","message":"started movie service on http://localhost:8090 in 145ns"}
+{"time_stamp":"2022-03-06T18:56:37+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:\"could not set value to redis\"","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"746315b0-978a-44dd-abf2-ac1f3a4d9a7e","user-agent":"PostmanRuntime/7.29.0","x-response-time":"408ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T19:00:38+01:00","level":"info","message":"started movie service on http://localhost:8090 in 134ns"}
+PONG <nil>
+{"time_stamp":"2022-03-06T19:00:57+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"b00fd053-7bf7-46c4-89c4-4bfdf8cbbc52","user-agent":"PostmanRuntime/7.29.0","x-response-time":"136ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T19:06:20+01:00","level":"info","message":"started movie service on http://localhost:8090 in 118ns"}
+{"time_stamp":"2022-03-06T19:06:48+01:00","version":"1.0","level":"ERROR","level_value":0,"statuscode":"500","message":"Internal Server Error:\"could not set value to redis\"","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"6340a7ac-0493-4c8e-9b2a-b2c40213879a","user-agent":"PostmanRuntime/7.29.0","x-response-time":"225ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T19:07:36+01:00","level":"info","message":"started movie service on http://localhost:8090 in 144ns"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-06T19:07:42+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"5f081fda-b94c-44a0-b6d1-36b201ea9bce","user-agent":"PostmanRuntime/7.29.0","x-response-time":"292ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-06T19:07:45+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"6dde7659-b31a-435d-9a31-285eca775cb9","user-agent":"PostmanRuntime/7.29.0","x-response-time":"156ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T19:30:20+01:00","level":"info","message":"started movie service on http://localhost:8090 in 95ns"}
