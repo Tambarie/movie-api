@@ -931,3 +931,25 @@ bushaApp
 {"time_stamp":"2022-03-06T20:00:15+01:00","level":"info","message":"started movie service on http://localhost:8090 in 128ns"}
 Movies retrieved from cache
 {"time_stamp":"2022-03-06T20:00:21+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"c00c90b5-b47f-41c3-8b7c-2cc72e5e83d4","user-agent":"PostmanRuntime/7.29.0","x-response-time":"234ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T20:05:28+01:00","level":"info","message":"started movie service on http://localhost:8090 in 101ns"}
+Movies retrieved from cache
+{"time_stamp":"2022-03-06T20:05:35+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"8aac68b6-d00d-40a6-b1eb-7023ae949160","user-agent":"PostmanRuntime/7.29.0","x-response-time":"306ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T20:10:26+01:00","level":"info","message":"started movie service on http://localhost:8090 in 216ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T20:16:06+01:00","level":"info","message":"started movie service on http://localhost:8090 in 130ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T20:16:45+01:00","level":"info","message":"started movie service on http://localhost:8090 in 108ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T20:20:06+01:00","level":"info","message":"started movie service on http://localhost:8090 in 203ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-06T20:21:12+01:00","level":"info","message":"started movie service on http://localhost:8090 in 138ns"}
+PONG <nil>
+{"time_stamp":"2022-03-06T20:21:18+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"a9742fca-f481-4ca9-bb9a-18187f2e5bae","user-agent":"PostmanRuntime/7.29.0","x-response-time":"466ns","x-application-host":"localhost:8090","remote_ip":"::1"}

@@ -36,8 +36,6 @@ func main() {
 
 	if os.Getenv("REDIS_URL ") == "" {
 		Addr = fmt.Sprintf("%s:%s", redis_host, redis_port)
-	} else {
-		Addr = fmt.Sprintf("%s:%s", os.Getenv("redis_host"), os.Getenv("redis_port"))
 	}
 
 	dbRepository := ConnectToPostgres(postgresdb_user, postgresdb_pass, postgres_database_url, postgresdb_host, postgresdb_name, postgresdb_port, postgresdb_mode, postgresdb_timezone)

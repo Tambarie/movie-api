@@ -24,7 +24,7 @@ func NewRedisClient(host string, db int, expiry time.Duration) ports.RedisReposi
 
 func (r *RedisCache) getClient() *redis.Client {
 	var redisURL *redis.Options
-	if r.host != "" {
+	if os.Getenv("REDIS_URL") == "" {
 		redisURL = &redis.Options{
 			Addr:     r.host,
 			Password: "",
