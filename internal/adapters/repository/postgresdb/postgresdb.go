@@ -2,8 +2,6 @@ package postgresdb
 
 import (
 	"fmt"
-	domain "github.com/Tambarie/movie-api/internal/core/domain/movie"
-
 	"github.com/Tambarie/movie-api/internal/core/helper"
 	"github.com/Tambarie/movie-api/internal/ports"
 	"gorm.io/driver/postgres"
@@ -25,10 +23,10 @@ func NewPostgresClient(DBUser, DBPass, DBHost, DBName, DBPort, DBTimezone, DBMod
 	if err != nil {
 		log.Fatal(helper.PrintErrorMessage("500", "failed to connect to database"))
 	}
-	err = db.AutoMigrate(&domain.Comment{})
-	if err != nil {
-		panic(err)
-	}
+	//err = db.AutoMigrate(&domain.Comment{})
+	//if err != nil {
+	//	panic(err)
+	//}
 	return db
 }
 
