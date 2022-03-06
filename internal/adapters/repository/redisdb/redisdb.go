@@ -3,6 +3,7 @@ package redisdb
 import (
 	"github.com/Tambarie/movie-api/internal/ports"
 	"github.com/go-redis/redis/v8"
+	"os"
 	"time"
 )
 
@@ -22,9 +23,18 @@ func NewRedisClient(host string, db int, expiry time.Duration) ports.RedisReposi
 }
 
 func (r *RedisCache) getClient() *redis.Client {
-	return redis.NewClient(&redis.Options{
-		Addr:     r.host,
-		Password: "",
-		DB:       r.db,
-	})
+	if os.Getenv("REDIS_URL ") == "" {
+		return redis.NewClient(&redis.Options{
+			Addr:     r.host,
+			Password: "",
+			DB:       r.db,
+		})
+	} else {
+		redisURL, err := redis.ParseURL(os.Getenv("REDIS_URL"))
+		if err != nil {
+			panic(err)
+		}
+		return redis.NewClient(redisURL)
+	}
+
 }
