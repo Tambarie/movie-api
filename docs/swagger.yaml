@@ -47,13 +47,13 @@ definitions:
       title:
         type: string
     type: object
-host: localhost:8090
+host: https://busha-movie-api.herokuapp.com
 info:
   contact:
     email: support@swagger.io
     name: API Support
     url: http://www.swagger.io/support
-  description: Repo can be found here:https://github.com/Tambarie/movie-api//
+  description: Repo can be found here:https://github.com/Tambarie/movie-api
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT

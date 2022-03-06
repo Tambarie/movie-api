@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "Repo can be found here:https://github.com/Tambarie/movie-api//",
+        "description": "Repo can be found here:https://github.com/Tambarie/movie-api",
         "title": "Movie-API Service",
         "contact": {
             "name": "API Support",
@@ -14,7 +14,7 @@
         },
         "version": "1"
     },
-    "host": "localhost:8090",
+    "host": "https://busha-movie-api.herokuapp.com",
     "basePath": "/",
     "paths": {
         "/movies": {

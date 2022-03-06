@@ -237,11 +237,11 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1",
-	Host:             "localhost:8090",
+	Host:             "https://busha-movie-api.herokuapp.com",
 	BasePath:         "/",
 	Schemes:          []string{},
 	Title:            "Movie-API Service",
-	Description:      "Repo can be found here:https://github.com/Tambarie/movie-api//",
+	Description:      "Repo can be found here:https://github.com/Tambarie/movie-api",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 }
