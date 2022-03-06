@@ -9,6 +9,7 @@ import (
 	_ "gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
+	"os"
 )
 
 type PostgresRepository struct {
@@ -18,7 +19,7 @@ type PostgresRepository struct {
 func NewPostgresClient(DBUser, DBPass, PostgresDBURL, DBHost, DBName, DBPort, DBTimezone, DBMode string) *gorm.DB {
 	var dsn string
 
-	dsn = PostgresDBURL
+	dsn = os.Getenv("DATABASE_URL")
 	if dsn == "" {
 		dsn = fmt.Sprintf("host=%v user=%v dbname=%v port=%v sslmode=%v TimeZone=%v", DBHost, DBUser, DBName, DBPort, DBMode, DBTimezone)
 	}
