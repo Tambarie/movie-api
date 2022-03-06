@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/Tambarie/movie-api/docs"
 	api "github.com/Tambarie/movie-api/internal/adapters/api/movie"
 	"github.com/Tambarie/movie-api/internal/adapters/repository/postgresdb"
 	"github.com/Tambarie/movie-api/internal/adapters/repository/redisdb"
@@ -10,10 +11,27 @@ import (
 	"github.com/Tambarie/movie-api/internal/core/shared"
 	"github.com/Tambarie/movie-api/internal/ports"
 	"github.com/gin-gonic/gin"
+	ginSwagger "github.com/swaggo/gin-swagger"
+
+	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"log"
 	"time"
 )
 
+// @title         Movie-API Service
+// @version      1
+// @description  Repo can be found here:https://github.com/Tambarie/movie-api//
+
+// @contact.name   API Support
+// @contact.url    http://www.swagger.io/support
+// @contact.email  support@swagger.io
+
+// @license.name  MIT
+// @license.url   https://opensource.org/licenses/MIT
+
+// @host       localhost:8090
+// @BasePath  /
+// @securityDefinitions.basic  BasicAuth
 func main() {
 	helper.InitializeLogDir()
 	_, postgresdb_pass, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()
@@ -27,14 +45,15 @@ func main() {
 	handler := api.NewHTTPHandler(service, redisService)
 
 	router := gin.Default()
-	//
 	router.Use(helper.LogRequest)
 
+	docs.SwaggerInfo.BasePath = "/api"
 	router.GET("/api/movies", handler.GetMovies())
 	router.GET("/api/movies/:movieID/characters", handler.GetMoviesCharacters())
 	router.POST("/api/movies/:movieID/comments", handler.AddCommentToMovies())
 	router.GET("/api/movies/:movieID/comments", handler.GetCommentsInMovie())
 
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	router.NoRoute(func(ctx *gin.Context) {
 		ctx.JSON(404,
 			helper.PrintErrorMessage("404", shared.NoResourceFound))
