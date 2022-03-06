@@ -11,6 +11,7 @@ import (
 	"github.com/Tambarie/movie-api/internal/ports"
 	"github.com/gin-gonic/gin"
 	"log"
+	"os"
 	"time"
 )
 
@@ -57,7 +58,11 @@ func main() {
 
 	fmt.Println("service running on " + service_address + ":" + service_port)
 	helper.LogEvent("info", fmt.Sprintf("started movie service on "+service_address+":"+service_port+" in "+time.Since(time.Now()).String()))
-	_ = router.Run(":" + service_port)
+	PORT := fmt.Sprintf(":%s", os.Getenv("PORT"))
+	if PORT == ":" {
+		PORT += "8090"
+	}
+	_ = router.Run(PORT)
 }
 
 func ConnectToPostgres(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBTimezone, DBMode string) ports.MovieRepository {
