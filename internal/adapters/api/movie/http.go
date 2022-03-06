@@ -54,6 +54,7 @@ func (h *HTTPHandler) GetMovies() gin.HandlerFunc {
 			err = h.redisService.SetMovie("movies", movies)
 			if err != nil {
 				context.JSON(http.StatusInternalServerError, "could not set value to redis")
+				return
 			}
 		}
 		context.JSON(http.StatusOK, movies)
