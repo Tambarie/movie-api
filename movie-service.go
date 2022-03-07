@@ -30,6 +30,7 @@ import (
 // @BasePath  /
 // @securityDefinitions.basic  BasicAuth
 func main() {
+	log.SetFlags(log.LstdFlags | log.Lshortfile | log.Llongfile)
 	helper.InitializeLogDir()
 	var Addr string
 	_, postgresdb_pass, postgres_database_url, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()

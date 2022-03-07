@@ -979,3 +979,9 @@ bushaApp
 am in postgres db
 bushaApp
 {"time_stamp":"2022-03-07T12:58:31+01:00","level":"info","message":"started movie service on http://localhost:8090 in 193ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-07T13:18:50+01:00","level":"info","message":"started movie service on http://localhost:8090 in 145ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-07T13:25:59+01:00","level":"info","message":"started movie service on http://localhost:8090 in 262ns"}

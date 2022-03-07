@@ -19,7 +19,7 @@ func InitializeLogDir() {
 	f, err := os.OpenFile(logDir+Config.LogFile, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 
 	if err != nil {
-		log.Fatalf("error opening file:%v", err)
+		log.Printf("error opening file:%v", err)
 	}
 	log.SetFlags(0)
 	log.SetOutput(f)
