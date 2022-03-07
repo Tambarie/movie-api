@@ -16,6 +16,7 @@ import (
 // @Router /movies/:movieID/comments/ [post]
 func (h *HTTPHandler) AddCommentToMovies() gin.HandlerFunc {
 	return func(context *gin.Context) {
+		//getting the parameter from the url path
 		movieIDStr := context.Param("movieID")
 		movieID, err := strconv.Atoi(movieIDStr)
 		if err != nil {
@@ -23,16 +24,19 @@ func (h *HTTPHandler) AddCommentToMovies() gin.HandlerFunc {
 			return
 		}
 
+		// initializing the comment struct
 		comment := &domain.Comment{}
 		comment.IP = context.ClientIP()
 		comment.MovieID = movieID
 
+		// binding the initialized fields to json
 		err = context.BindJSON(&comment)
 		if err != nil {
 			context.JSON(http.StatusInternalServerError, err)
 			return
 		}
 
+		// check if the length of the comment is more than 500
 		if len(comment.Content) >= 500 {
 			context.JSON(http.StatusBadRequest, gin.H{
 				"message": "please, you have exceeded the 500 maximum number of inputs",
@@ -40,18 +44,21 @@ func (h *HTTPHandler) AddCommentToMovies() gin.HandlerFunc {
 			return
 		}
 
+		//saving the comments to the DB
 		commentData, err := h.movieService.SaveComments(comment)
 		if err != nil {
 			context.JSON(http.StatusBadRequest, err)
 			return
 		}
 
+		// Increment comment in redisDB
 		if !h.IncrementCommentCountInRedis(movieID) {
 			context.JSON(http.StatusBadRequest, gin.H{
 				"message": "movieID not present",
 			})
 		}
 
+		//Successful adding  of comment
 		context.JSON(200, gin.H{
 			"message": "successfully added comment to movie",
 			"data":    commentData,
