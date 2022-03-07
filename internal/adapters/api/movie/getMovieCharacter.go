@@ -21,7 +21,7 @@ import (
 // @Param order query string false "descending or ascending order"
 // @Param filterBy query string false "can be filtered by male or female options"
 // @Success 200 {object} []domain.Character
-// @Router /movies/{movieID}/characters/ [get]
+// @Router /movies/:movieID/characters/ [get]
 func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 	return func(context *gin.Context) {
 		sorter := context.Query("sort")
