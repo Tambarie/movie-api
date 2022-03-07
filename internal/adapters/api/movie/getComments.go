@@ -21,11 +21,13 @@ func (h *HTTPHandler) GetCommentsInMovie() gin.HandlerFunc {
 			context.JSON(http.StatusBadRequest, err)
 			return
 		}
+		// Getting comments from the database
 		movieData, err := h.movieService.GetComments(movieID)
 		if err != nil {
 			context.JSON(http.StatusInternalServerError, err)
 		}
 
+		// successful retrieval of comments from DB
 		context.JSON(200, gin.H{
 			"message": "comments retrieved",
 			"data":    movieData,
