@@ -5,6 +5,7 @@ import (
 	"log"
 )
 
+// SaveComments Saving comments to PostgresDB
 func (r *PostgresRepository) SaveComments(comment *domain.Comment) (*domain.Comment, error) {
 
 	log.Println("comment is about to save")
@@ -17,6 +18,7 @@ func (r *PostgresRepository) SaveComments(comment *domain.Comment) (*domain.Comm
 	return comment, nil
 }
 
+// GetComments Getting Comments from PostgresDB
 func (r *PostgresRepository) GetComments(movieID int) (*[]domain.Comment, error) {
 	var comments []domain.Comment
 	err := r.DB.Where("movie_id = ?", movieID).Find(&comments).Error
@@ -26,6 +28,7 @@ func (r *PostgresRepository) GetComments(movieID int) (*[]domain.Comment, error)
 	return &comments, nil
 }
 
+// CountComments Counting comments in the DB
 func (r *PostgresRepository) CountComments(movieID int) (int64, error) {
 	var counter int64
 	err := r.DB.Model(&domain.Comment{}).Where("movie_id = ? ", movieID).Count(&counter).Error
