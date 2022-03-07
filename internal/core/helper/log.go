@@ -63,7 +63,7 @@ func LogRequest(ctx *gin.Context) {
 		Message:         http.StatusText(statusCode) + ":" + response,
 		Version:         "1.0",
 		CorrelationId:   uuid.New().String(),
-		AppName:         Config.AppName,
+		AppName:         "movie-service",
 		ApplicationHost: ctx.Request.Host,
 		LoggerName:      "",
 		TimeStamp:       time.Now().Format(time.RFC3339),
