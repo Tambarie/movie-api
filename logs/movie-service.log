@@ -973,3 +973,9 @@ bushaApp
 {"time_stamp":"2022-03-07T12:35:48+01:00","level":"info","message":"started movie service on http://localhost:8090 in 213ns"}
 PONG <nil>
 {"time_stamp":"2022-03-07T12:37:26+01:00","version":"1.0","level":"INFO","level_value":0,"statuscode":"200","message":"OK:no errors at the moment","logger_name":"","app_name":"movie-service","path":"/api/movies","method":"GET","x-correlation-id":"82a20186-5318-42fa-8bf5-385423194815","user-agent":"PostmanRuntime/7.29.0","x-response-time":"411ns","x-application-host":"localhost:8090","remote_ip":"::1"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-07T12:49:45+01:00","level":"info","message":"started movie service on http://localhost:8090 in 143ns"}
+am in postgres db
+bushaApp
+{"time_stamp":"2022-03-07T12:58:31+01:00","level":"info","message":"started movie service on http://localhost:8090 in 193ns"}
