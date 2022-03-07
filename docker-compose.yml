@@ -1,0 +1,35 @@
+version: "3.9"  # optional since v1.27.0
+
+services:
+  movie-api:
+    build: .
+    ports:
+      - "8090:8080"
+#    volumes:
+#      - .:/app
+#      - $GOPATH/pkg/mod:/go/pkg/mod
+    depends_on:
+      - db
+      - redis
+  db:
+    image: postgres # use latest official postgres version
+
+    env_file:
+      - movie-service.env # configure postgres
+#    environment:
+#      - POSTGRES_USER=postgres
+#      - POSTGRES_PASSWORD=postgres
+#      - POSTGRES_DB=busha-movie-api
+    ports:
+      - 5432:5432
+    volumes:
+      - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+
+
+
+volumes:
+  database-data:

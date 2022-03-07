@@ -24,7 +24,6 @@ func NewPostgresClient(DBUser, DBPass, PostgresDBURL, DBHost, DBName, DBPort, DB
 	if dsn == "" {
 		dsn = fmt.Sprintf("host=%v user=%v dbname=%v port=%v sslmode=%v TimeZone=%v", DBHost, DBUser, DBName, DBPort, DBMode, DBTimezone)
 	}
-	log.Println("am in postgres db")
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
