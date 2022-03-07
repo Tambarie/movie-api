@@ -25,7 +25,7 @@ import (
 // @license.name  MIT
 // @license.url   https://opensource.org/licenses/MIT
 
-// @host      busha-movie-api.herokuapp.com
+// @host      localhost:8090
 // @BasePath  /
 // @securityDefinitions.basic  BasicAuth
 func main() {
@@ -34,7 +34,7 @@ func main() {
 
 	var Addr string
 
-	//variables gotten from .env files
+	//variables gotten from movie-service.env files
 	_, postgresdb_pass, postgres_database_url, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()
 
 	if os.Getenv("REDIS_URL ") == "" {
