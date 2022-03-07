@@ -9,6 +9,7 @@ import (
 	"time"
 )
 
+// SetMovie Saving movie to RedisDB
 func (r *RedisCache) SetMovie(key string, value *[]domain.Movie) error {
 	client := r.getClient()
 	json, err := json.Marshal(value)
@@ -25,6 +26,7 @@ func (r *RedisCache) SetMovie(key string, value *[]domain.Movie) error {
 	return err
 }
 
+// GetMovie  Getting movie from RedisDB
 func (r *RedisCache) GetMovie(key string) *[]domain.Movie {
 	redisClient := r.getClient()
 	val, err := redisClient.Get(context.Background(), key).Result()
@@ -40,6 +42,7 @@ func (r *RedisCache) GetMovie(key string) *[]domain.Movie {
 	return &movie
 }
 
+// SetMovieCharactersInRedis Saving movie characters to RedisDB
 func (r *RedisCache) SetMovieCharactersInRedis(key string, value []domain.Character) error {
 	client := r.getClient()
 	json, err := json.Marshal(value)
@@ -56,6 +59,7 @@ func (r *RedisCache) SetMovieCharactersInRedis(key string, value []domain.Charac
 	return err
 }
 
+// GetMovieCharactersInRedis  Getting movie characters from RedisDB
 func (r *RedisCache) GetMovieCharactersInRedis(key string) []domain.Character {
 	redisClient := r.getClient()
 	val, err := redisClient.Get(context.Background(), key).Result()
