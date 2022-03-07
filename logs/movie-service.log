@@ -989,3 +989,8 @@ am in postgres db
 {"time_stamp":"2022-03-07T14:21:14+01:00","level":"info","message":"started movie service on http://localhost:8090 in 188ns"}
 am in postgres db
 {"time_stamp":"2022-03-07T14:24:59+01:00","level":"info","message":"started movie service on http://localhost:8090 in 175ns"}
+am in postgres db
+{"time_stamp":"2022-03-07T15:16:43+01:00","level":"info","message":"started movie service on http://localhost:8090 in 92ns"}
+{"time_stamp":"2022-03-07T16:25:26+01:00","level":"info","message":"started movie service on http://localhost:8090 in 204ns"}
+{"time_stamp":"2022-03-07T16:25:59+01:00","level":"info","message":"started movie service on http://localhost:8090 in 502ns"}
+{"time_stamp":"2022-03-07T16:35:29+01:00","level":"info","message":"started movie service on http://localhost:8090 in 277ns"}
