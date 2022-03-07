@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "a5b5a2ad-de59-4571-a4c4-7de3584b3517",
+		"name": "busha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get-movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://busha-movie-api.herokuapp.com/api/movies",
+					"protocol": "https",
+					"host": [
+						"busha-movie-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-characters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://busha-movie-api.herokuapp.com/api/movies/1/characters?sort=height&filter=hermaphrodite&order=ascending",
+					"protocol": "https",
+					"host": [
+						"busha-movie-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"movies",
+						"1",
+						"characters"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "height"
+						},
+						{
+							"key": "filter",
+							"value": "hermaphrodite"
+						},
+						{
+							"key": "order",
+							"value": "ascending"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-comments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"content\": \"it's emmanuel\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://busha-movie-api.herokuapp.com/api/movies/1/comments",
+					"protocol": "https",
+					"host": [
+						"busha-movie-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"movies",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://busha-movie-api.herokuapp.com/api/movies/1/comments",
+					"protocol": "https",
+					"host": [
+						"busha-movie-api",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"movies",
+						"1",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
