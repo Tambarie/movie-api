@@ -14,6 +14,7 @@ import (
 func DefineRouter(handler *api.HTTPHandler, router *gin.Engine) {
 	router.Use(helper.LogRequest)
 	docs.SwaggerInfo.BasePath = "/api"
+	router.GET("/", handler.Home())
 	router.GET("/api/movies", handler.GetMovies())
 	router.GET("/api/movies/:movieID/characters", handler.GetMoviesCharacters())
 	router.POST("/api/movies/:movieID/comments", handler.AddCommentToMovies())
