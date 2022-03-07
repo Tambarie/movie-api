@@ -21,7 +21,7 @@ func ErrorArrayToError(errorBody []validator.FieldError) error {
 		body := ErrorBody{
 			Message: value.Error(),
 			Code:    "400{validation} error",
-			Source:  Config.AppName,
+			Source:  "movie-service",
 		}
 		errorResponse.Errors = append(errorResponse.Errors, body)
 	}
@@ -35,7 +35,7 @@ func PrintErrorMessage(code, message string) error {
 	errorResponse.Errors = append(errorResponse.Errors, ErrorBody{
 		Code:    code,
 		Message: message,
-		Source:  Config.AppName,
+		Source:  "movie-service",
 	})
 	return errorResponse
 }
