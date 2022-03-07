@@ -39,6 +39,7 @@ func GetAllMovies() (*[]domain.Movie, error) {
 	return &movies.Results, nil
 }
 
+// GetAllCharactersByMovieID Getting the Characters by movieID
 func GetAllCharactersByMovieID(movieId int) (*[]string, error) {
 	url := fmt.Sprintf("%s/films/%d/", swapiURl, movieId)
 
@@ -67,6 +68,7 @@ func GetAllCharactersByMovieID(movieId int) (*[]string, error) {
 	return &data.Characters, nil
 }
 
+// GetCharacterInfo Getting the Character Info
 func GetCharacterInfo(link string) (*domain.Character, error) {
 	resp, err := http.Get(link)
 	if err != nil {
