@@ -10,7 +10,6 @@ import (
 	services "github.com/Tambarie/movie-api/internal/core/services/movie"
 	"github.com/Tambarie/movie-api/internal/ports"
 	"github.com/gin-gonic/gin"
-	"log"
 	"os"
 	"time"
 )
@@ -30,9 +29,12 @@ import (
 // @BasePath  /
 // @securityDefinitions.basic  BasicAuth
 func main() {
-	log.SetFlags(log.LstdFlags | log.Lshortfile | log.Llongfile)
+
 	helper.InitializeLogDir()
+
 	var Addr string
+
+	//variables gotten from .env files
 	_, postgresdb_pass, postgres_database_url, service_address, service_port, _, postgresdb_host, postgresdb_mode, postgresdb_name, postgresdb_user, postgresdb_port, postgresdb_timezone, redis_host, redis_port, _ := helper.LoadConfig()
 
 	if os.Getenv("REDIS_URL ") == "" {
@@ -40,9 +42,11 @@ func main() {
 	}
 
 	dbRepository := ConnectToPostgres(postgresdb_user, postgresdb_pass, postgres_database_url, postgresdb_host, postgresdb_name, postgresdb_port, postgresdb_mode, postgresdb_timezone)
-	log.Println(postgresdb_name)
+
 	redisRepository := ConnectToRedis(Addr)
+
 	service := services.New(dbRepository)
+
 	redisService := services.NewRedisService(redisRepository)
 	handler := api.NewHTTPHandler(service, redisService)
 
@@ -60,11 +64,13 @@ func main() {
 	_ = router.Run(PORT)
 }
 
+// ConnectToPostgres Connecting to PostgresDB
 func ConnectToPostgres(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBTimezone, DBMode string) ports.MovieRepository {
 	repo := postgresdb.NewPostgresRepository(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBMode, DBTimezone)
 	return services.New(repo)
 }
 
+// ConnectToRedis Connecting to RedisDB
 func ConnectToRedis(addr string) ports.RedisRepository {
 	redisRe := redisdb.NewRedisClient(addr, 0, 15)
 	return services.NewRedisService(redisRe)
