@@ -10,6 +10,7 @@ import (
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 )
 
+// DefineRouter Routes
 func DefineRouter(handler *api.HTTPHandler, router *gin.Engine) {
 	router.Use(helper.LogRequest)
 	docs.SwaggerInfo.BasePath = "/api"
