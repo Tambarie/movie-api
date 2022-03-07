@@ -17,6 +17,7 @@ import (
 func (h *HTTPHandler) GetMovies() gin.HandlerFunc {
 	return func(context *gin.Context) {
 
+		// Getting movie from the redis DB
 		movies := h.redisService.GetMovie("movies")
 
 		if movies == nil {
@@ -32,6 +33,7 @@ func (h *HTTPHandler) GetMovies() gin.HandlerFunc {
 			})
 			movies = &result
 
+			// Adding comments to movie
 			h.AddComment(movies)
 
 			err = h.redisService.SetMovie("movies", movies)
