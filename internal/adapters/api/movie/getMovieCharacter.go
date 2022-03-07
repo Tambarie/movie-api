@@ -36,9 +36,11 @@ func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 			return
 		}
 
+		// Getting movie characters from redis DB
 		movieCharacters := h.redisService.GetMovieCharactersInRedis(movieIDStr)
 
 		if movieCharacters == nil {
+			//
 			movieLinks, err := api.GetAllCharactersByMovieID(movieID)
 
 			if err != nil {
@@ -54,9 +56,12 @@ func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 
 				movieCharacters = append(movieCharacters, *info)
 			}
+
+			// Setting movie characters from redis DB
 			_ = h.redisService.SetMovieCharactersInRedis(movieIDStr, movieCharacters)
 		}
 
+		// Filtering movie characters
 		if filter == "n/a" || filter == "hermaphrodite" || filter == "female" || filter == "male" {
 			filteredObject := []domain.Character{}
 
@@ -108,6 +113,7 @@ func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 			}
 		}
 
+		// Calculating the total height of movie characters
 		var totalHeight float64 = 0
 		for _, movieCharacter := range movieCharacters {
 			height, err := strconv.ParseFloat(movieCharacter.Height, 64)
@@ -119,7 +125,10 @@ func (h *HTTPHandler) GetMoviesCharacters() gin.HandlerFunc {
 			totalHeight += height
 		}
 
+		// Converting from cm to feet
 		feet := totalHeight / 30.48
+
+		// Converting from cm to inches
 		inches := totalHeight / 2.54
 
 		result := fmt.Sprintf("%0.2fcm, %0.2fft , %0.2finches", totalHeight, feet, inches)
