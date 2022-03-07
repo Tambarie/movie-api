@@ -2,17 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/Tambarie/movie-api/docs"
 	api "github.com/Tambarie/movie-api/internal/adapters/api/movie"
 	"github.com/Tambarie/movie-api/internal/adapters/repository/postgresdb"
 	"github.com/Tambarie/movie-api/internal/adapters/repository/redisdb"
+	"github.com/Tambarie/movie-api/internal/adapters/server"
 	"github.com/Tambarie/movie-api/internal/core/helper"
 	services "github.com/Tambarie/movie-api/internal/core/services/movie"
-	"github.com/Tambarie/movie-api/internal/core/shared"
 	"github.com/Tambarie/movie-api/internal/ports"
 	"github.com/gin-gonic/gin"
-	ginSwagger "github.com/swaggo/gin-swagger"
-	"github.com/swaggo/gin-swagger/swaggerFiles"
 	"log"
 	"os"
 	"time"
@@ -48,20 +45,10 @@ func main() {
 	redisService := services.NewRedisService(redisRepository)
 	handler := api.NewHTTPHandler(service, redisService)
 
+	// Initiating the router
 	router := gin.Default()
-	router.Use(helper.LogRequest)
 
-	docs.SwaggerInfo.BasePath = "/api"
-	router.GET("/api/movies", handler.GetMovies())
-	router.GET("/api/movies/:movieID/characters", handler.GetMoviesCharacters())
-	router.POST("/api/movies/:movieID/comments", handler.AddCommentToMovies())
-	router.GET("/api/movies/:movieID/comments", handler.GetCommentsInMovie())
-
-	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
-	router.NoRoute(func(ctx *gin.Context) {
-		ctx.JSON(404,
-			helper.PrintErrorMessage("404", shared.NoResourceFound))
-	})
+	server.DefineRouter(handler, router)
 
 	fmt.Println("service running on " + service_address + ":" + service_port)
 	helper.LogEvent("info", fmt.Sprintf("started movie service on "+service_address+":"+service_port+" in "+time.Since(time.Now()).String()))
