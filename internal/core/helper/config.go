@@ -8,7 +8,6 @@ import (
 )
 
 type ConfigStruct struct {
-	AppName             string `mapstructure:"app_name"`
 	PostgresDatabaseURL string `mapstructure:"DATABASE_URL"`
 	ServiceAddress      string `mapstructure:"service_address"`
 	ServicePort         string `mapstructure:"service_port"`
