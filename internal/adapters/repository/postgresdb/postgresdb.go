@@ -16,6 +16,7 @@ type PostgresRepository struct {
 	DB *gorm.DB
 }
 
+// NewPostgresClient Initializing Postgres Client
 func NewPostgresClient(DBUser, DBPass, PostgresDBURL, DBHost, DBName, DBPort, DBTimezone, DBMode string) *gorm.DB {
 	var dsn string
 
@@ -37,6 +38,7 @@ func NewPostgresClient(DBUser, DBPass, PostgresDBURL, DBHost, DBName, DBPort, DB
 	return db
 }
 
+// NewPostgresRepository  Initializing Postgres repository
 func NewPostgresRepository(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBTimezone, DBMode string) ports.MovieRepository {
 	db := NewPostgresClient(DBUser, DBPass, PostgresDBUrl, DBHost, DBName, DBPort, DBTimezone, DBMode)
 	return &PostgresRepository{
